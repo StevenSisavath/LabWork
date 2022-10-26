@@ -92,24 +92,50 @@ import string
 # 9. create an else statement and make it opposite of #8
 # 10. return the True or False variable
 
-def reverse_string(word): 
-    reversed_word = ''
-    for element in range(len(word) -1, -1, -1):
-        reversed_word += word[element]
-    return reversed_word
+# def reverse_string(word): 
+#     reversed_word = ''
+#     for element in range(len(word) -1, -1, -1):
+#         reversed_word += word[element]
+#     return reversed_word
 
-def find_palindrome():
-    user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
-    new_user_input = user_input.lower()
-    word_reversed = reverse_string(new_user_input)
-    palindrome = True
-    if new_user_input == word_reversed:
-        palindrome = True
-        print(f'{user_input} is a palindrome!')
-        return palindrome
-    else:
-        palindrome = False
-        print(f'{user_input} is not a palindrome!')
-        return palindrome
+# def find_palindrome():
+#     user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
+#     new_user_input = user_input.lower()
+#     word_reversed = reverse_string(new_user_input)
+#     palindrome = True
+#     if new_user_input == word_reversed:
+#         palindrome = True
+#         print(f'{user_input} is a palindrome!')
+#         return palindrome
+#     else:
+#         palindrome = False
+#         print(f'{user_input} is not a palindrome!')
+#         return palindrome
     
-find_palindrome()
+# find_palindrome()
+
+# Task 4: Compress a String of Characters
+# 1. define a function to compress a string (get_compressed_string)
+# 2. set a variable (string) to capture a users input
+# 3. set a variable (compress_string) to catpure final string
+# 4. set a variable to count strings (counter)
+# 5. create a for loop to find each element in a rangle of the length of the string
+# 6. create an if statement to add to the counter each time the element is the same
+# 7. create an else statement to add to the compressed_string variable each time the element changes. Also, reset the counter
+# 8. add the last element plus its counter
+# 9. print the final string (compressed_string)
+
+def get_compressed_string():
+    string = input('What characters would you like to compress?')
+    compressed_string = ''
+    counter = 1
+    for char in range(len(string)-1):
+        if string[char] == string[char+1]:
+            counter += 1
+        else:
+            compressed_string += string[char] + str(counter)
+            counter = 1
+    compressed_string += string[char+1] + str(counter)
+    print(compressed_string)
+
+get_compressed_string()
