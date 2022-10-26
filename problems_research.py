@@ -39,13 +39,13 @@ import string
 # 4. add each letter to the 'variable that holds nothing' by using +=
 # 5. print the end variable after the for loop has been completed autmatically
 # 6. call the funtion with its parameter
-# def reverse_string(word): 
-#     reversed_word = ''
-#     for element in range(len(word) -1, -1, -1):
-#         reversed_word += word[element]
-#     print(f' Here is your word reversed: {reversed_word}')
+def reverse_string(word): 
+    reversed_word = ''
+    for element in range(len(word) -1, -1, -1):
+        reversed_word += word[element]
+    print(f' Here is your word reversed: {reversed_word}')
 
-# reverse_string(input('What word would you like to be reversed?'))
+reverse_string(input('What word would you like to be reversed?'))
 
 #Task 2: Capitalize a Letter
 # 1. research how to capitalize the first letter in each word of a string (string.capwords())
@@ -54,11 +54,11 @@ import string
 # 3. set a variable 'final_result' equal to ''
 # 4. create a while loop
 
-# def capitalize_each_word(words):
-#     return string.capwords(words)
+def capitalize_each_word(words):
+    return string.capwords(words)
 
-# final_result = capitalize_each_word(input('What string of words would you like to be capitalized?'))
-# print(final_result)
+final_result = capitalize_each_word(input('What string of words would you like to be capitalized?'))
+print(final_result)
 
 # Same task but more complicated to find a better understanding
 # 1. define a function to capitalize the first letters of a string (capitalize_first_letters())
@@ -70,15 +70,15 @@ import string
 # 7. create a variable outside the function (final_string) and set it to the function
 # 8. print that variable to test out if works #can print out function as it is without setting it equal to a variable
 
-# def capitalize_first_letters():
-#     user_input = input('Which words would you like to capitalize?')
-#     new_string = ''
-#     for element in user_input.split():
-#         new_string += element.capitalize() + ' '
-#     return new_string
+def capitalize_first_letters():
+    user_input = input('Which words would you like to capitalize?')
+    new_string = ''
+    for element in user_input.split():
+        new_string += element.capitalize() + ' '
+    return new_string
 
-# final_string = capitalize_first_letters()
-# print(final_string)
+final_string = capitalize_first_letters()
+print(final_string)
 
 # Task 3: Palindrome
 # 1. get reverse_string function from task 1 to use
@@ -92,27 +92,27 @@ import string
 # 9. create an else statement and make it opposite of #8
 # 10. return the True or False variable
 
-# def reverse_string(word): 
-#     reversed_word = ''
-#     for element in range(len(word) -1, -1, -1):
-#         reversed_word += word[element]
-#     return reversed_word
+def reverse_string(word): 
+    reversed_word = ''
+    for element in range(len(word) -1, -1, -1):
+        reversed_word += word[element]
+    return reversed_word
 
-# def find_palindrome():
-#     user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
-#     new_user_input = user_input.lower()
-#     word_reversed = reverse_string(new_user_input)
-#     palindrome = True
-#     if new_user_input == word_reversed:
-#         palindrome = True
-#         print(f'{user_input} is a palindrome!')
-#         return palindrome
-#     else:
-#         palindrome = False
-#         print(f'{user_input} is not a palindrome!')
-#         return palindrome
+def find_palindrome():
+    user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
+    new_user_input = user_input.lower()
+    word_reversed = reverse_string(new_user_input)
+    palindrome = True
+    if new_user_input == word_reversed:
+        palindrome = True
+        print(f'{user_input} is a palindrome!')
+        return palindrome
+    else:
+        palindrome = False
+        print(f'{user_input} is not a palindrome!')
+        return palindrome
     
-# find_palindrome()
+find_palindrome()
 
 # Task 4: Compress a String of Characters
 # 1. define a function to compress a string (get_compressed_string)
