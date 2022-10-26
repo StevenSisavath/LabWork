@@ -31,7 +31,7 @@ import string
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Lab - Problem Solving II
-
+'''
 #Task 1: Reverse a string
 # 1. define a funtion to call whenever a string is needed to be reversed
 # 2. create a variable to hold a string with nothing
@@ -39,27 +39,28 @@ import string
 # 4. add each letter to the 'variable that holds nothing' by using +=
 # 5. print the end variable after the for loop has been completed autmatically
 # 6. call the funtion with its parameter
-def reverse_string(word): 
-    reversed_word = ''
-    for element in range(len(word) -1, -1, -1):
-        reversed_word += word[element]
-    print(f' Here is your word reversed: {reversed_word}')
+'''
+# def reverse_string(word): 
+#     reversed_word = ''
+#     for element in range(len(word) -1, -1, -1):
+#         reversed_word += word[element]
+#     print(f' Here is your word reversed: {reversed_word}')
 
-reverse_string(input('What word would you like to be reversed?'))
-
+# reverse_string(input('What word would you like to be reversed?'))
+'''
 #Task 2: Capitalize a Letter
 # 1. research how to capitalize the first letter in each word of a string (string.capwords())
 # 2. import string module to use capwords variable
 # 2. define a funtion to capitalize the letter of each word
 # 3. set a variable 'final_result' equal to ''
 # 4. create a while loop
+'''
+# def capitalize_each_word(words):
+#     return string.capwords(words)
 
-def capitalize_each_word(words):
-    return string.capwords(words)
-
-final_result = capitalize_each_word(input('What string of words would you like to be capitalized?'))
-print(final_result)
-
+# final_result = capitalize_each_word(input('What string of words would you like to be capitalized?'))
+# print(final_result)
+'''
 # Same task but more complicated to find a better understanding
 # 1. define a function to capitalize the first letters of a string (capitalize_first_letters())
 # 2. set a user input variable so the user can input any words they want
@@ -69,17 +70,17 @@ print(final_result)
 # 6. return the new_string back to where it's called
 # 7. create a variable outside the function (final_string) and set it to the function
 # 8. print that variable to test out if works #can print out function as it is without setting it equal to a variable
+'''
+# def capitalize_first_letters():
+#     user_input = input('Which words would you like to capitalize?')
+#     new_string = ''
+#     for element in user_input.split():
+#         new_string += element.capitalize() + ' '
+#     return new_string
 
-def capitalize_first_letters():
-    user_input = input('Which words would you like to capitalize?')
-    new_string = ''
-    for element in user_input.split():
-        new_string += element.capitalize() + ' '
-    return new_string
-
-final_string = capitalize_first_letters()
-print(final_string)
-
+# final_string = capitalize_first_letters()
+# print(final_string)
+'''
 # Task 3: Palindrome
 # 1. get reverse_string function from task 1 to use
 # 2. revise function to return a reversed word
@@ -91,29 +92,29 @@ print(final_string)
 # 8. create an if statement and ask if new_user_input is equal to word_reversed. If so print out that the users_input is a palindrome. Set the True/False variable to True
 # 9. create an else statement and make it opposite of #8
 # 10. return the True or False variable
+'''
+# def reverse_string(word): 
+#     reversed_word = ''
+#     for element in range(len(word) -1, -1, -1):
+#         reversed_word += word[element]
+#     return reversed_word
 
-def reverse_string(word): 
-    reversed_word = ''
-    for element in range(len(word) -1, -1, -1):
-        reversed_word += word[element]
-    return reversed_word
-
-def find_palindrome():
-    user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
-    new_user_input = user_input.lower()
-    word_reversed = reverse_string(new_user_input)
-    palindrome = True
-    if new_user_input == word_reversed:
-        palindrome = True
-        print(f'{user_input} is a palindrome!')
-        return palindrome
-    else:
-        palindrome = False
-        print(f'{user_input} is not a palindrome!')
-        return palindrome
+# def find_palindrome():
+#     user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
+#     new_user_input = user_input.lower()
+#     word_reversed = reverse_string(new_user_input)
+#     palindrome = True
+#     if new_user_input == word_reversed:
+#         palindrome = True
+#         print(f'{user_input} is a palindrome!')
+#         return palindrome
+#     else:
+#         palindrome = False
+#         print(f'{user_input} is not a palindrome!')
+#         return palindrome
     
-find_palindrome()
-
+# find_palindrome()
+'''
 # Task 4: Compress a String of Characters
 # 1. define a function to compress a string (get_compressed_string)
 # 2. set a variable (string) to capture a users input
@@ -124,18 +125,52 @@ find_palindrome()
 # 7. create an else statement to add to the compressed_string variable each time the element changes. Also, reset the counter
 # 8. add the last element plus its counter
 # 9. print the final string (compressed_string)
+'''
+# def get_compressed_string():
+#     string = input('What characters would you like to compress?')
+#     compressed_string = ''
+#     counter = 1
+#     for char in range(len(string)-1):
+#         if string[char] == string[char+1]:
+#             counter += 1
+#         else:
+#             compressed_string += string[char] + str(counter)
+#             counter = 1
+#     compressed_string += string[char+1] + str(counter)
+#     print(compressed_string)
 
-def get_compressed_string():
-    string = input('What characters would you like to compress?')
-    compressed_string = ''
-    counter = 1
-    for char in range(len(string)-1):
-        if string[char] == string[char+1]:
-            counter += 1
-        else:
-            compressed_string += string[char] + str(counter)
-            counter = 1
-    compressed_string += string[char+1] + str(counter)
-    print(compressed_string)
+# get_compressed_string()
 
-get_compressed_string()
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Lab - Problem solving III
+'''
+1. define a function; find_prime_number(user_range) to find prime numbers of any range
+2. write an if statement where num > 1 (1 is not a prime number due to the fact that is not divisible by exactly 2 numbers.
+It is only divisible by 1. negative numbers are not by definition prime numbers)
+3. in that if statement create a for loop for an element in a range of 2-user range
+4. in the for loop create an if statement to break whenever the (element in the first for loop % element in second for loop) is equal to 0
+5. create an else statement print all the prime number in a range set by the user
+6. set a variable in the beginning of the function equal to an interger value that the user has set
+'''
+#extra comments for more prints if wanted
+def find_prime_number():
+    user_range = int(input('What range of numbers would you like to find the prime numbers for?'))
+    for number in range(user_range):
+        if number > 1:
+            for num in range(2,num):
+                if (number % num) == 0:
+                    #print(num, 'is not') 
+                    break
+            else:
+                print(number)
+        # else:
+        #     print(num, 'is not')
+
+# def find_prime_number():
+#     for num in range():
+
+#test
+find_prime_number()
+
+
