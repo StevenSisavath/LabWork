@@ -70,12 +70,46 @@ import string
 # 7. create a variable outside the function (final_string) and set it to the function
 # 8. print that variable to test out if works #can print out function as it is without setting it equal to a variable
 
-def capitalize_first_letters():
-    user_input = input('Which words would you like to capitalize?')
-    new_string = ''
-    for element in user_input.split():
-        new_string += element.capitalize() + ' '
-    return new_string
+# def capitalize_first_letters():
+#     user_input = input('Which words would you like to capitalize?')
+#     new_string = ''
+#     for element in user_input.split():
+#         new_string += element.capitalize() + ' '
+#     return new_string
 
-final_string = capitalize_first_letters()
-print(final_string)
+# final_string = capitalize_first_letters()
+# print(final_string)
+
+# Task 3: Palindrome
+# 1. get reverse_string function from task 1 to use
+# 2. revise function to return a reversed word
+# 3. define a function to find palindromes (find_palindrome())
+# 4. set a variable (user_input) to ask for the users input
+# 5. set a variable (new_user_input) to lowercase string user inputted 
+# 6. set a variable (word_reversed) equal to a function that reverses new_user_input
+# 7. set True or False variable to capture the result
+# 8. create an if statement and ask if new_user_input is equal to word_reversed. If so print out that the users_input is a palindrome. Set the True/False variable to True
+# 9. create an else statement and make it opposite of #8
+# 10. return the True or False variable
+
+def reverse_string(word): 
+    reversed_word = ''
+    for element in range(len(word) -1, -1, -1):
+        reversed_word += word[element]
+    return reversed_word
+
+def find_palindrome():
+    user_input = input('What word, phrase, or sequence do you want to know is or is not a palindrome?')
+    new_user_input = user_input.lower()
+    word_reversed = reverse_string(new_user_input)
+    palindrome = True
+    if new_user_input == word_reversed:
+        palindrome = True
+        print(f'{user_input} is a palindrome!')
+        return palindrome
+    else:
+        palindrome = False
+        print(f'{user_input} is not a palindrome!')
+        return palindrome
+    
+find_palindrome()
