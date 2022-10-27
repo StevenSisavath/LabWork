@@ -1,10 +1,7 @@
 import random
+import keys
 # Lab - Built-in Data Structures II
 # Task 1: A List of Destination Dictionaries
-destination_list = ['Houston', 'Dallas', 'Austin', 'San Antonio']
-restaurant_list = ['LongHorn Steakhouse', 'Outback Steakhouse', 'Saltgrass Steakhouse', 'Texas Roadhouse', 'Taste of Texas Restaurant']
-transportation_list = ['Hovercraft', 'Bus', 'Personal Vehicle', 'Uber', 'Train']
-entertainment_list = ['Amusement Park', 'Hiking', 'Circus', 'Arcade']
 destination_houston = {
     'destination' : 'Houston',
     'restaurant' : ['LongHorn Steakhouse', 'Outback Steakhouse', 'Saltgrass Steakhouse', 'Texas Roadhouse', 'Taste of Texas Restaurant'],
