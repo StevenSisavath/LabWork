@@ -1,9 +1,9 @@
 # Lab - Built-in Data Structures
 # Task 1: Dictionary, Set, and Tuple
 # 1.
-months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December') #tuple for months
-print(f'National Pi Day occurs in {months[int(3.14)-1]}!')
-print(f'National Pi Day occurs in {months[2]}!') #print for National Pi Day
+# months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December') #tuple for months
+# print(f'National Pi Day occurs in {months[int(3.14)-1]}!')
+# print(f'National Pi Day occurs in {months[2]}!') #print for National Pi Day
 #longer version
 # months_dictionary = { 
 #     'first_month': 'January',
@@ -23,10 +23,10 @@ print(f'National Pi Day occurs in {months[2]}!') #print for National Pi Day
 # print(months_dictionary[Pi])
 
 # 2.
-fruits_and_vegetables = ['Orange', 'Pineapple', 'Avacodo', 'Green Peas', 'Broccoli']
-fruits_and_vegetables.extend(['Apple', 'Grape', 'Spinach', 'garlic'])
-for element in fruits_and_vegetables:
-    print(element)
+# fruits_and_vegetables = ['Orange', 'Pineapple', 'Avacodo', 'Green Peas', 'Broccoli']
+# fruits_and_vegetables.extend(['Apple', 'Grape', 'Spinach', 'garlic'])
+# for element in fruits_and_vegetables:
+#     print(element)
 
 # 3.
 # def print_user_info(): #Can be split into 2 functions. First to obtain the user's information. Second, to print the information. For the sake of the question, I combined the 2.
